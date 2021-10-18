@@ -2,20 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Service = (props) => {
-const {serviceId, serviceUrl, serviceName, serviceNote} = props.service;
+    console.log(props);
+const {serviceUrl, serviceName, serviceNote, serviceId} = props.service;
 
-
-    return (
+return (
         <div>  
-  <div class="col">
-    <div class="card h-100">
-      <img src={serviceUrl} class="card-img-top" alt="..."/>
-      <div class="card-body">
-        <h5 class="card-title text-primary fw-bold">{serviceName}</h5>
-        <p class="card-text">{serviceNote}</p>
+  <div className="col">
+    <div className="card h-100">
+      <img src={serviceUrl} className="card-img-top" alt="..."/>
+      <div className="card-body">
+        <h5 className="card-title text-primary fw-bold">{serviceName}</h5>
+        <p className="card-text">{serviceNote}</p>
       </div>
-      <Link style={{textDecoration: "none"}} to={`/serviceDeatils/${serviceId}`}>
-      <button type="button" class="btn btn-primary">Service Fee</button></Link>
+      <Link to={`/singleservice/${serviceId}`}><button type="button" className="btn btn-primary">Service Fee</button></Link>
     </div>
   </div> 
 </div>

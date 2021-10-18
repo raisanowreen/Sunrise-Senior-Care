@@ -11,6 +11,7 @@ import Login from './Pages/Login/Login/Login';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
+import SingleService from './Pages/SingleService/SingleService';
 
 function App() {
   return (
@@ -29,9 +30,6 @@ function App() {
         <Route exact path="/services">
           <Services></Services>
         </Route>
-        <Route exact path="/service/:serviceId">
-          <Service></Service>
-        </Route>
         <Route exact path="/testimonials">
           <Testimonials></Testimonials>
         </Route>
@@ -42,7 +40,10 @@ function App() {
           <Contact></Contact>
         </Route>
         <Route exact path="/login">
-          <Login></Login>
+          <Login></Login>  
+        </Route>
+        <Route exact path="/singleservice/:id">
+          <SingleService></SingleService>
         </Route>
         <Route exact path="*">
           <NotFound></NotFound>

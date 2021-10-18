@@ -16,7 +16,7 @@ const Banner = () => {
       <div className="carousel-caption d-none d-md-block">
       <h1>Care For Every Situtions</h1>
         <p>Taking care of relatives</p>
-        <Link as={HashLink} to="/home#contact"><button type="button" class="btn btn-primary rounded-pill">Contact Us</button></Link>
+        <Link as={HashLink} to="/home#contact"><button type="button" className="btn btn-primary rounded-pill">Contact Us</button></Link>
       </div>
     </div>
      </div>
