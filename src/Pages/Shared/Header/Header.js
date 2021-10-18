@@ -30,17 +30,30 @@ const Header = () => {
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page" as={HashLink} to="/appointment#appointment">Appointment</Link>
         </li>
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" as={HashLink} to="/gallery">Gallery</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" as={HashLink} to="/home#contact">Contact</Link>
+        </li>
       </ul>
       
     </div>
     <div className="d-flex">
     <div className="d-flex">
-      <Link className="nav-link active" aria-current="page" to="/login">Login</Link>
+      
+       
       <Link className="nav-link active" aria-current="page" to="/login">Logout</Link>
-      <h4 className="me-2 mt-2">Raisa</h4>
-      <img src={headerLogo} alt="" width="30" height="24" className="d-inline-block align-text-top mt-2"/>
+      
+        <Link className="nav-link active" aria-current="page" to="/login">Login</Link>
+
+<h4 className="me-2 mt-2">T</h4>
       </div>
-  </div>
+      <img src={headerLogo} alt="" width="30" height="24" className="d-inline-block align-text-top mt-2"/>
+      
+     
+      </div>
+ 
   <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
