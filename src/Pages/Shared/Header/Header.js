@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import headerLogo from '../../../images/logos/logo_header.png';
 import { HashLink } from 'react-router-hash-link';
+import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
+  const {logOut, user} = useAuth();
     return (
         <div>
             <div className="bg-primary text-white d-flex justify-content-end pt-3">
@@ -43,20 +45,18 @@ const Header = () => {
     <div className="d-flex">
       
        
-      <Link className="nav-link active" aria-current="page" to="/login">Logout</Link>
+    { user?.email?
+      <button onClick={logOut} type="button" className="btn btn-primary">Log out</button>:
       
         <Link className="nav-link active" aria-current="page" to="/login">Login</Link>
-
-<h4 className="me-2 mt-2">T</h4>
-      </div>
-      <img src={headerLogo} alt="" width="30" height="24" className="d-inline-block align-text-top mt-2"/>
-      
-     
+}
+<h4 className="me-2 mt-2">{user.displayName}</h4>
       </div>
  
   <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
+    </div>
     </div>
 </nav>
         </div>
