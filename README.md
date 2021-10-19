@@ -11,7 +11,7 @@ This project is created on medical theme. From lots of options, senior care hosp
 
 There are lots of features have been applied in this project.
 
-#  Frameworks
+..* Features
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
