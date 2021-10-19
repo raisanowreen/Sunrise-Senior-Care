@@ -6,24 +6,23 @@ initializeAuthentication();
 
 const auth = getAuth();
 const useFirebase = () =>{
+    const [user, setUser] = useState({})
+    const [isLoading, setIsLoading] = useState(true);
 const [name, setName] =useState('');
     const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isLogin, setIsLogin] = useState(false);
 
-    const [user, setUser] = useState({})
-    const [isLoading, setIsLoading] = useState(true);
+   
 
     
 // Google sign in method implementation
 const signInUsingGoogle = () =>{
     setIsLoading(true);
 const googleProvider = new GoogleAuthProvider();
-signInWithPopup(auth, googleProvider)
-.then(result =>{
-    setUser(result.user);
-})
+return signInWithPopup(auth, googleProvider)
+
 .finally(() => setIsLoading(false));
 }
 
@@ -53,14 +52,15 @@ const handleEmailChange = e =>{
         return;
       }
 
+
 isLogin ? processLogin(email, password) : registerNewUser(email, password);
 
   
     }
     // user login implementation
     const processLogin = (email, password) =>{
-        setIsLoading(true);
         signInWithEmailAndPassword(auth, email,password)
+       
         .then(result =>{
             const user = result.user;
             console.log(user);
@@ -70,7 +70,6 @@ isLogin ? processLogin(email, password) : registerNewUser(email, password);
           .catch(error =>{
               setError(error.message);
           })
-          .finally(() => setIsLoading(false));
     }
 
 const setUserName = () =>{
@@ -80,7 +79,6 @@ const setUserName = () =>{
 
 // user register implementation
     const registerNewUser = (email, password) =>{
-        setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
         .then(result =>{
           const user = result.user;
@@ -92,7 +90,6 @@ const setUserName = () =>{
 
             setError(error.message);
         })
-        .finally(() => setIsLoading(false));
     }
 
 // observe user state change

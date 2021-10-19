@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
 
 
@@ -6,7 +7,19 @@ import useAuth from '../../../hooks/useAuth';
 // Login and register implementation by using firebase and google signin method used
 const Login = () => {
     const {signInUsingGoogle, handleEmailChange, handlePasswordChange, handleRegistration, error, toggleLogin, isLogin, handleNameChange} = useAuth();
+const location = useLocation();
+const history = useHistory();
+const redirect_uri = location.state?.from || '/home'
+console.log('came from', location.state?.from);
 
+const handleGoogleLogIn = () =>{
+  signInUsingGoogle()
+    .then(result =>{
+      history.push(redirect_uri)
+      // setUser(result.user);
+  })
+  
+}
     return (
         <div>
                         <h3 className="text-primary text-center mt-2 mb-2" id="services">{isLogin ? 'Login': 'Register'} Please</h3>  
@@ -35,7 +48,7 @@ const Login = () => {
 </form>
 {/* google sign in method */}
 <div className="d-flex justify-content-center mb-5">
-<button onClick={signInUsingGoogle} type="submit" className="btn btn-primary">Google Sign in</button>
+<button onClick={handleGoogleLogIn} type="submit" className="btn btn-primary">Google Sign in</button>
 
 </div>
         </div>

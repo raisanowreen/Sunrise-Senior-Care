@@ -28,7 +28,7 @@ One of the main features here is the private route implementation. The private r
 Toggle login and registration has been used by using firebase. Also use can login by using googlesign in method.
 
 
-+ Hosting
++ Hosting & Functionality
 
-Sunrise Senior Care site has been hosted by using firebase deploy.  
+Sunrise Senior Care site has been hosted by using firebase deploy. This project has been pushed in private git repo.
 
