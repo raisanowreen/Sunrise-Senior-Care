@@ -1,13 +1,16 @@
 import React from 'react';
 import useAuth from '../../../hooks/useAuth';
 
+
+
+// Login and register implementation by using firebase and google signin method used
 const Login = () => {
     const {signInUsingGoogle, handleEmailChange, handlePasswordChange, handleRegistration, error, toggleLogin, isLogin, handleNameChange} = useAuth();
 
     return (
         <div>
                         <h3 className="text-primary text-center mt-2 mb-2" id="services">{isLogin ? 'Login': 'Register'} Please</h3>  
-
+{/* Toggle User login and registration  */}
             <form onSubmit={handleRegistration} className="w-50 mx-auto">
  {! isLogin && <div className="mb-3">
     <label htmlFor="exampleInputEmail1" className="form-label">Your name</label>
@@ -30,6 +33,7 @@ const Login = () => {
   <button type="submit" className="btn btn-primary">{isLogin ? 'Login' : 'Register'}</button>
   <h1>{error}</h1>
 </form>
+{/* google sign in method */}
 <div className="d-flex justify-content-center mb-5">
 <button onClick={signInUsingGoogle} type="submit" className="btn btn-primary">Google Sign in</button>
 

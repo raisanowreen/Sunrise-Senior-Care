@@ -4,6 +4,8 @@ import Services from '../Services/Services';
 import Testimonials from '../Testimonials/Testimonials';
 import WhyUs from '../WhyUs/WhyUs';
 
+
+// Home page starts
 const Home = () => {
     return (
      <div className="home">

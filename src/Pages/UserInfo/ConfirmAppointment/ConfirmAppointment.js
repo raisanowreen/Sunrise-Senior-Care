@@ -1,5 +1,8 @@
 import React from 'react';
 
+
+
+// Appointment confirmation page starts with private route
 const ConfirmAppointment = () => {
     return (
         <div className="m-5"> 

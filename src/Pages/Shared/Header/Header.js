@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import headerLogo from '../../../images/logos/logo_header.png';
-import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../../hooks/useAuth';
 
+
+// Navbar starts with four menus
 const Header = () => {
   const {logOut, user} = useAuth();
     return (
@@ -21,16 +22,16 @@ const Header = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" as={HashLink} to="/home">Home</Link>
+          <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" as={HashLink} to="/departments#departments">Departments</Link>
+          <Link className="nav-link active" aria-current="page" to="/departments">Departments</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" as={HashLink} to="/appointment">Appointment</Link>
+          <Link className="nav-link active" aria-current="page" to="/appointment">Appointment</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" as={HashLink} to="/home#contact">Contact</Link>
+          <Link className="nav-link active" aria-current="page" to="/contact">Contact</Link>
         </li>
       </ul>
       
@@ -38,7 +39,7 @@ const Header = () => {
     <div className="d-flex">
     <div className="d-flex">
       
-       
+   {/* conditional login and logout     */}
     { user?.email?
       <div className="d-flex">
         <button onClick={logOut} type="button" className="btn btn-primary me-2">Log out</button>

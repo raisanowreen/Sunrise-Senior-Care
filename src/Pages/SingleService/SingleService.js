@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import './SingleService.css';
 
+
+
+// Single service showcasing by using dynamic route and private route
 const SingleService = () => {
     const {id} = useParams();
 const [service, setService] = useState({});
@@ -20,18 +22,18 @@ useEffect(()=>{
 
     return (
        <div className="bg-primary">
-            <div class="card text-center w-50 mx-auto">
-        <div class="card-header mt-3">
+            <div className="card text-center w-50 mx-auto">
+        <div className="card-header mt-3">
           Welcome
         </div>
         <img className="p-5" src={service.serviceUrl} alt=""/>
-        <div class="card-body">
-          <h5 class="card-title text-primary fw-bold">{service.serviceDepartment}</h5>
-          <p class="card-text">{service.serviceDetails}</p>
-          <p class="card-text">Charge: $ {service.serviceFee}</p>
+        <div className="card-body">
+          <h5 className="card-title text-primary fw-bold">{service.serviceDepartment}</h5>
+          <p className="card-text">{service.serviceDetails}</p>
+          <p className="card-text">Charge: $ {service.serviceFee}</p>
           <Link to="/appointment"><button type="button" className="btn btn-primary">Get Appointment</button></Link>
         </div>
-        <div class="card-footer text-muted">
+        <div className="card-footer text-muted">
           Available Now
         </div>
       </div>

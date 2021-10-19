@@ -16,7 +16,7 @@ const [name, setName] =useState('');
     const [isLoading, setIsLoading] = useState(true);
 
     
-
+// Google sign in method implementation
 const signInUsingGoogle = () =>{
     setIsLoading(true);
 const googleProvider = new GoogleAuthProvider();
@@ -57,6 +57,7 @@ isLogin ? processLogin(email, password) : registerNewUser(email, password);
 
   
     }
+    // user login implementation
     const processLogin = (email, password) =>{
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email,password)
@@ -77,7 +78,7 @@ const setUserName = () =>{
     .then(result => { })
 }
 
-
+// user register implementation
     const registerNewUser = (email, password) =>{
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
@@ -88,7 +89,7 @@ const setUserName = () =>{
           setUserName();
         })
         .catch(error =>{
-          
+
             setError(error.message);
         })
         .finally(() => setIsLoading(false));
@@ -108,7 +109,7 @@ const unSubscribed = onAuthStateChanged(auth, user =>{
     return () => unSubscribed;
 },[])
 
-
+// logout imnplementation
 const logOut = () =>{
     setIsLoading(true);
     signOut(auth)

@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './contexts/AuthProvider';
 import Banner from './Pages/Home/Banner/Banner';
-import Blogs from './Pages/Home/Blogs/Blogs';
 import Contact from './Pages/Home/Contact/Contact';
 import Departments from './Pages/Home/Departments/Departments';
 import Home from './Pages/Home/Home/Home';
@@ -45,9 +44,6 @@ function App() {
       </Route>
       <Route exact path="/whyus">
         <WhyUs></WhyUs>
-      </Route>
-      <Route exact path="/blogs">
-        <Blogs></Blogs>
       </Route>
       <Route exact path="/contact">
         <Contact></Contact>
