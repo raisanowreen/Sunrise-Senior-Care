@@ -11,19 +11,19 @@ const Appointment = () => {
             <div className="row g-2 d-block w-75 mx-auto">
   <div className="col-md">
     <div className="form-floating">
-      <input type="text" className="form-control" id="floatingInputGrid"/>
+      <input type="text" className="form-control" id="floatingInputGrid" required/>
       <label htmlFor="floatingInputGrid">Patient Name</label>
     </div>
   </div>
   <div className="col-md">
     <div className="form-floating">
-      <input type="number" className="form-control" id="floatingInputGrid"/>
+      <input type="number" className="form-control" id="floatingInputGrid" required/>
       <label htmlFor="floatingInputGrid">Phone Number</label>
     </div>
   </div>
   <div className="col-md">
     <div className="form-floating">
-      <input type="text" className="form-control" id="floatingInputGrid"/>
+      <input type="text" className="form-control" id="floatingInputGrid" required/>
       <label htmlFor="floatingInputGrid">Patient's age</label>
     </div>
   </div>

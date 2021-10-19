@@ -24,9 +24,9 @@ const Header = () => {
       <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/departments">Departments</Link>
-        </li>
+        </li> */}
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/appointment">Appointment</Link>
         </li>

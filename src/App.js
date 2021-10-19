@@ -3,8 +3,8 @@ import './App.css';
 import AuthProvider from './contexts/AuthProvider';
 import Banner from './Pages/Home/Banner/Banner';
 import Contact from './Pages/Home/Contact/Contact';
-import DepartmentDetails from './Pages/Home/DepartmentDetails/DepartmentDetails';
-import Departments from './Pages/Home/Departments/Departments';
+// import DepartmentDetails from './Pages/Home/DepartmentDetails/DepartmentDetails';
+// import Departments from './Pages/Home/Departments/Departments';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Home/Login/Login';
 import Services from './Pages/Home/Services/Services';
@@ -20,7 +20,6 @@ import PrivateRoute from './Pages/UserInfo/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
-  
     <AuthProvider>
       <Router>
     <Header></Header>
@@ -58,12 +57,12 @@ function App() {
       <PrivateRoute exact path="/confirm">
         <ConfirmAppointment></ConfirmAppointment>
       </PrivateRoute>
-      <PrivateRoute exact path="/departments">
+      {/* <PrivateRoute exact path="/departments">
         <Departments></Departments>
       </PrivateRoute>
       <PrivateRoute exact path="/departmentdetails">
         <DepartmentDetails></DepartmentDetails>
-      </PrivateRoute>
+      </PrivateRoute> */}
       <Route exact path="*">
         <NotFound></NotFound>
       </Route>
