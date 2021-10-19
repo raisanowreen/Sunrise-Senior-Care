@@ -21,7 +21,7 @@ Chevy Chase, MD 20815</p>
         <p>+18 (077) 555 22 33</p>
     </div>
 </div>
-<img className="mt-5" src="https://www.varanasihospital.com/wp-content/uploads/2015/10/Contact-Us_Banner1-1280x800.jpg" alt="" height="300px"/>
+<img className="mt-5 pt-5" src="https://www.varanasihospital.com/wp-content/uploads/2015/10/Contact-Us_Banner1-1280x800.jpg" alt="" height="250px"/>
 </div>
    </div>
     );
