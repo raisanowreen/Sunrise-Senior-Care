@@ -8,23 +8,23 @@ const Appointment = () => {
         <div className="m-5 bg-primary p-5">
                         <h3 className="text-dark fw-bold text-center mt-5 mb-5" id="services">Please Fill up the Form</h3>  
 
-            <div className="row g-2 d-block w-50 mx-auto">
+            <div className="row g-2 d-block w-75 mx-auto">
   <div className="col-md">
     <div className="form-floating">
       <input type="text" className="form-control" id="floatingInputGrid"/>
-      <label for="floatingInputGrid">Patient Name</label>
+      <label htmlFor="floatingInputGrid">Patient Name</label>
     </div>
   </div>
   <div className="col-md">
     <div className="form-floating">
       <input type="number" className="form-control" id="floatingInputGrid"/>
-      <label for="floatingInputGrid">Phone Number</label>
+      <label htmlFor="floatingInputGrid">Phone Number</label>
     </div>
   </div>
   <div className="col-md">
     <div className="form-floating">
       <input type="text" className="form-control" id="floatingInputGrid"/>
-      <label for="floatingInputGrid">Patient's age</label>
+      <label htmlFor="floatingInputGrid">Patient's age</label>
     </div>
   </div>
   <div className="col-md">
@@ -35,7 +35,7 @@ const Appointment = () => {
         <option value="2">Dr. Steve</option>
         <option value="3">Dr. Melani</option>
       </select>
-      <label for="floatingSelectGrid">Select Doctor</label>
+      <label htmlFor="floatingSelectGrid">Select Doctor</label>
     </div>
   </div>
   <div className="col-md">
@@ -44,7 +44,7 @@ const Appointment = () => {
         <option selected>This is my first time</option>
         <option value="1">I have already came here.</option>
       </select>
-      <label for="floatingSelectGrid">Select Options</label>
+      <label htmlFor="floatingSelectGrid">Select Options</label>
     </div>
   </div>
   <div className="col-md">
@@ -55,7 +55,7 @@ const Appointment = () => {
         <option value="2">Third Week</option>
         <option value="3">Fourth Week</option>
       </select>
-      <label for="floatingSelectGrid">Select Week</label>
+      <label htmlFor="floatingSelectGrid">Select Week</label>
     </div>
   </div>
 </div>

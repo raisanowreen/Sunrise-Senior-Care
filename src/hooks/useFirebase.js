@@ -44,7 +44,7 @@ const handleEmailChange = e =>{
       e.preventDefault();
       console.log(email, password);
       if(password.length <6){
-        setError('Must 6 letters')
+        setError('Password must be 6 letters long')
         return;
       }
       if(!/(?=.*[A-Z].*[A-Z])/.test(password)){

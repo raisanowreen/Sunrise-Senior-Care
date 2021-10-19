@@ -4,9 +4,10 @@ import React from 'react';
 // Clents'testimonials starts with carousal
 const Testimonials = () => {
     return (
-        <div className="w-50 mx-auto m-5">
+        <div className="m-5">
             <h3 className="text-primary text-center mt-5 mb-5" id="services">Buzz About Us</h3>  
-            <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
+            <div className="d-flex flex-sm-wrap flex-md-nowrap flex-xl-wrap flex-wrap justify-content-around">
+            <div id="carouselExampleCaptions" className="carousel slide w-50" data-bs-ride="carousel">
   <div className="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -43,6 +44,11 @@ const Testimonials = () => {
     <span className="carousel-control-next-icon" aria-hidden="true"></span>
     <span className="visually-hidden">Next</span>
   </button>
+</div>
+            
+<div>
+<img className="pb-4" src="https://thumbs.dreamstime.com/b/full-length-confident-young-doctor-white-background-smiling-showing-thumbs-up-31416804.jpg" alt="" height="450px" />
+</div>
 </div>
         </div>
     );

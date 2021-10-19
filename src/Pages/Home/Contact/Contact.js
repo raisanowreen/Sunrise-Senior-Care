@@ -5,7 +5,7 @@ const Contact = () => {
         <div>
         <h3 className="text-primary text-center mt-5" id="services">Contact Us</h3>  
 
-<div className="d-flex flex-sm-wrap flex-md-nowrap justify-content-center m-5">
+<div className="d-flex flex-sm-wrap flex-md-nowrap flex-xl-wrap flex-wrap justify-content-center m-5">
 <div className="ms-5 pt-5 pe-5">
     <div className="mb-5">
         <h1 className="text-warning"><i className="fas fa-home"></i>Hospital Address</h1>

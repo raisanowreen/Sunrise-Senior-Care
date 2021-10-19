@@ -40,13 +40,13 @@ const Header = () => {
     <div className="d-flex">
       
    {/* conditional login and logout     */}
-    { user?.email?
+    { user?.email? 
       <div className="d-flex">
         <button onClick={logOut} type="button" className="btn btn-primary me-2">Log out</button>
       <h4 className="me-2 mt-2">{user.displayName}</h4>
       </div>:
       
-        <div><Link className="nav-link active" aria-current="page" to="/login">Login</Link>
+        <div><Link className="nav-link active" aria-current="page" to="/login"><button type="button" className="btn btn-primary me-2"><i className="fas fa-user me-2"></i>Log in</button></Link>
         </div>
 }
       </div>
