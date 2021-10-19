@@ -3,6 +3,7 @@ import './App.css';
 import AuthProvider from './contexts/AuthProvider';
 import Banner from './Pages/Home/Banner/Banner';
 import Contact from './Pages/Home/Contact/Contact';
+import DepartmentDetails from './Pages/Home/DepartmentDetails/DepartmentDetails';
 import Departments from './Pages/Home/Departments/Departments';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Home/Login/Login';
@@ -59,6 +60,9 @@ function App() {
       </PrivateRoute>
       <PrivateRoute exact path="/departments">
         <Departments></Departments>
+      </PrivateRoute>
+      <PrivateRoute exact path="/departmentdetails">
+        <DepartmentDetails></DepartmentDetails>
       </PrivateRoute>
       <Route exact path="*">
         <NotFound></NotFound>

@@ -7,7 +7,7 @@ const Testimonials = () => {
         <div className="m-5">
             <h3 className="text-primary text-center mt-5 mb-5" id="services">Buzz About Us</h3>  
             <div className="d-flex flex-sm-wrap flex-md-nowrap flex-xl-wrap flex-wrap justify-content-around">
-            <div id="carouselExampleCaptions" className="carousel slide w-50" data-bs-ride="carousel">
+            <div id="carouselExampleCaptions" className="carousel slide w-50 mb-5" data-bs-ride="carousel">
   <div className="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -47,7 +47,7 @@ const Testimonials = () => {
 </div>
             
 <div>
-<img className="pb-4" src="https://thumbs.dreamstime.com/b/full-length-confident-young-doctor-white-background-smiling-showing-thumbs-up-31416804.jpg" alt="" height="450px" />
+<img className="pb-4" src="https://i.ibb.co/fMZ0RL0/cdc-N7-I1-Jy-PYJw-unsplash.jpg" alt="" height="450px" />
 </div>
 </div>
         </div>
