@@ -6,6 +6,7 @@ import DepartmentDetails from '../DepartmentDetails/DepartmentDetails';
 const Departments = () => {
     const [services, setServices] = useState([]);
 
+    
     useEffect(() =>{
         fetch('/facilities.json')
         .then(res =>res.json())
