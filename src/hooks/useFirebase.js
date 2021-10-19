@@ -66,9 +66,9 @@ isLogin ? processLogin(email, password) : registerNewUser(email, password);
             setError('');
           })
           
-        //   .catch(error =>{
-        //       setError(error.message);
-        //   })
+          .catch(error =>{
+              setError(error.message);
+          })
           .finally(() => setIsLoading(false));
     }
 
@@ -87,9 +87,10 @@ const setUserName = () =>{
           setError('');
           setUserName();
         })
-        // .catch(error =>{
-        //     setError(error.message);
-        // })
+        .catch(error =>{
+          
+            setError(error.message);
+        })
         .finally(() => setIsLoading(false));
     }
 
