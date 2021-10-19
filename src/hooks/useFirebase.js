@@ -13,19 +13,18 @@ const [name, setName] =useState('');
   const [isLogin, setIsLogin] = useState(false);
 
     const [user, setUser] = useState({})
+    const [isLoading, setIsLoading] = useState(true);
+
     
 
-   
-
-
 const signInUsingGoogle = () =>{
-  
+    setIsLoading(true);
 const googleProvider = new GoogleAuthProvider();
 signInWithPopup(auth, googleProvider)
 .then(result =>{
     setUser(result.user);
 })
-
+.finally(() => setIsLoading(false));
 }
 
 const toggleLogin = e =>{
@@ -56,20 +55,21 @@ const handleEmailChange = e =>{
 
 isLogin ? processLogin(email, password) : registerNewUser(email, password);
 
-
-
-     
+  
     }
     const processLogin = (email, password) =>{
+        setIsLoading(true);
         signInWithEmailAndPassword(auth, email,password)
         .then(result =>{
             const user = result.user;
             console.log(user);
             setError('');
           })
-          .catch(error =>{
-              setError(error.message);
-          })
+          
+        //   .catch(error =>{
+        //       setError(error.message);
+        //   })
+          .finally(() => setIsLoading(false));
     }
 
 const setUserName = () =>{
@@ -79,6 +79,7 @@ const setUserName = () =>{
 
 
     const registerNewUser = (email, password) =>{
+        setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
         .then(result =>{
           const user = result.user;
@@ -86,9 +87,10 @@ const setUserName = () =>{
           setError('');
           setUserName();
         })
-        .catch(error =>{
-            setError(error.message);
-        })
+        // .catch(error =>{
+        //     setError(error.message);
+        // })
+        .finally(() => setIsLoading(false));
     }
 
 // observe user state change
@@ -100,17 +102,17 @@ const unSubscribed = onAuthStateChanged(auth, user =>{
         else{
             setUser({})
         }
-        
+        setIsLoading(false); 
     });
     return () => unSubscribed;
 },[])
 
 
 const logOut = () =>{
-   
+    setIsLoading(true);
     signOut(auth)
     .then(() =>{})
-   
+    .finally(() => setIsLoading(false));
 }
     return {
         user,
@@ -122,7 +124,8 @@ const logOut = () =>{
         error,
         toggleLogin,
         isLogin,
-        handleNameChange
+        handleNameChange,
+        isLoading
     }
 }
 

@@ -1,14 +1,9 @@
 import React from 'react';
-import useAuth from '../../../hooks/useAuth';
 
 const Testimonials = () => {
-  const {signInUsingGoogle} = useAuth();
-
     return (
         <div className="w-50 mx-auto m-5">
             <h3 className="text-primary text-center mt-5 mb-5" id="services">Buzz About Us</h3>  
-            <button onClick={signInUsingGoogle} type="submit" className="btn btn-primary">Google Sign in</button>
-
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>

@@ -30,10 +30,7 @@ const Header = () => {
           <Link className="nav-link active" aria-current="page" as={HashLink} to="/departments#departments">Departments</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" as={HashLink} to="/appointment#appointment">Appointment</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" as={HashLink} to="/gallery">Gallery</Link>
+          <Link className="nav-link active" aria-current="page" as={HashLink} to="/appointment">Appointment</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page" as={HashLink} to="/home#contact">Contact</Link>
@@ -46,11 +43,14 @@ const Header = () => {
       
        
     { user?.email?
-      <button onClick={logOut} type="button" className="btn btn-primary">Log out</button>:
+      <div className="d-flex">
+        <button onClick={logOut} type="button" className="btn btn-primary me-2">Log out</button>
+      <h4 className="me-2 mt-2">{user.displayName}</h4>
+      </div>:
       
-        <Link className="nav-link active" aria-current="page" to="/login">Login</Link>
+        <div><Link className="nav-link active" aria-current="page" to="/login">Login</Link>
+        </div>
 }
-<h4 className="me-2 mt-2">{user.displayName}</h4>
       </div>
  
   <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

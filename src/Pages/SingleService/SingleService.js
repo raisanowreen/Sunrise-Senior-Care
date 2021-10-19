@@ -29,7 +29,7 @@ useEffect(()=>{
           <h5 class="card-title text-primary fw-bold">{service.serviceDepartment}</h5>
           <p class="card-text">{service.serviceDetails}</p>
           <p class="card-text">Charge: $ {service.serviceFee}</p>
-          <Link to="/home"><button type="button" className="btn btn-primary">Get Appointment</button></Link>
+          <Link to="/appointment"><button type="button" className="btn btn-primary">Get Appointment</button></Link>
         </div>
         <div class="card-footer text-muted">
           Available Now

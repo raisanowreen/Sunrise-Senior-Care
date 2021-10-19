@@ -4,6 +4,7 @@ import AuthProvider from './contexts/AuthProvider';
 import Banner from './Pages/Home/Banner/Banner';
 import Blogs from './Pages/Home/Blogs/Blogs';
 import Contact from './Pages/Home/Contact/Contact';
+import Departments from './Pages/Home/Departments/Departments';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Home/Login/Login';
 import Services from './Pages/Home/Services/Services';
@@ -13,6 +14,9 @@ import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import SingleService from './Pages/SingleService/SingleService';
+import Appointment from './Pages/UserInfo/Appointment/Appointment';
+import ConfirmAppointment from './Pages/UserInfo/ConfirmAppointment/ConfirmAppointment';
+import PrivateRoute from './Pages/UserInfo/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -48,9 +52,18 @@ function App() {
       <Route exact path="/contact">
         <Contact></Contact>
       </Route>
-      <Route exact path="/singleservice/:id">
+      <PrivateRoute exact path="/singleservice/:id">
         <SingleService></SingleService>
-      </Route>
+      </PrivateRoute>
+      <PrivateRoute exact path="/appointment">
+        <Appointment></Appointment>
+      </PrivateRoute>
+      <PrivateRoute exact path="/confirm">
+        <ConfirmAppointment></ConfirmAppointment>
+      </PrivateRoute>
+      <PrivateRoute exact path="/departments">
+        <Departments></Departments>
+      </PrivateRoute>
       <Route exact path="*">
         <NotFound></NotFound>
       </Route>
